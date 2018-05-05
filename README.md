@@ -1,2 +1,2 @@
-# programa-o-orientada-a-objetos
+# POO
 Estudo de Programação Orientada a Objetos com PHP
