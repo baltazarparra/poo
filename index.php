@@ -2,6 +2,7 @@
     require_once("config.php");
     require_once("firstClass.php");
     require_once("getterAndSetter.php");
+    require_once("staticMethod.php");
 
     $levi = new Pessoa();
     $levi->nome = "<b>Leviathan</b>";
@@ -11,5 +12,20 @@
     $golzin = new Carro();
     $golzin->setModelo("Gol");
     $golzin->setAno("1996");
-    print_r($golzin->dados())
+    print_r($golzin->dados());
+    
+    echo "<hr>";
+
+    $cpf = new Documento();
+    $cpf->setNumero("21431224030");
+    var_dump($cpf->getNumero());
+    echo "<hr>";
+    $cpf->setNumero("21431224039");
+    var_dump($cpf->getNumero());
+    echo "<hr>";
+    //Chamando metodo estatico
+    var_dump(Documento::validarCPF("21431224030"));
+    echo "<hr>";
+    //Chamando metodo estatico
+    var_dump(Documento::validarCPF("21431224039"));
 ?>
