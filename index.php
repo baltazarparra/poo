@@ -4,6 +4,7 @@
     require_once("getterAndSetter.php");
     require_once("staticMethod.php");
     require_once("magicMethod.php");
+    require_once("interface.php");
 
     $levi = new Pessoa();
     $levi->nome = "<b>Leviathan</b>";
@@ -35,6 +36,14 @@
     //Consumindo __construct
     $meuEndereco = new Endereco("Rua dos bobos", "Cidade de papel");
     var_dump($meuEndereco);
-?>
 
-<p><?= $meuEndereco ?></p>
+    echo "<hr>";
+
+    // interface
+    $carro = new Gol();
+    $carro->acelerar("100km");
+    echo "<hr>";
+    $carro->freiar("10km");
+    echo "<hr>";
+    $carro->trocar("4º");
+?>
