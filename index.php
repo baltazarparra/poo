@@ -46,4 +46,6 @@
     $carro->freiar("10km");
     echo "<hr>";
     $carro->trocar("4º");
+    echo "<hr>";
+    $carro->empurrar();
 ?>

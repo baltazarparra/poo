@@ -5,7 +5,7 @@
         public function trocar($marcha);
     }
 
-    class Gol implements Veiculo {
+    abstract class Auto implements Veiculo {
         public function acelerar($velocidade) {
             echo "Aceleração: ".$velocidade;
         }
@@ -16,6 +16,12 @@
 
         public function trocar($marcha) {
             echo "Marcha: ".$marcha;
+        }
+    }
+
+    class Gol extends Auto {
+        public function empurrar() {
+            echo "Empurrando o carro velho";
         }
     }
 ?>
