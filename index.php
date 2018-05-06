@@ -3,6 +3,7 @@
     require_once("firstClass.php");
     require_once("getterAndSetter.php");
     require_once("staticMethod.php");
+    require_once("magicMethod.php");
 
     $levi = new Pessoa();
     $levi->nome = "<b>Leviathan</b>";
@@ -28,4 +29,12 @@
     echo "<hr>";
     //Chamando metodo estatico
     var_dump(Documento::validarCPF("21431224039"));
+
+    echo "<hr>";
+
+    //Consumindo __construct
+    $meuEndereco = new Endereco("Rua dos bobos", "Cidade de papel");
+    var_dump($meuEndereco);
 ?>
+
+<p><?= $meuEndereco ?></p>
